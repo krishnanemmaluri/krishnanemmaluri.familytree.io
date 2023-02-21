@@ -4,7 +4,7 @@ var chart = new FamilyTree(document.getElementById("tree"), {
     siblingSeparation: 50,
     template: 'hugo',
     mode: 'dark',
-    miniMap: true,
+    miniMap: true,    
     nodeBinding: {
         field_0: "name",
         field_1: "title",
@@ -15,6 +15,20 @@ var chart = new FamilyTree(document.getElementById("tree"), {
     }
 });
 
+FamilyTree.miniMap.colors = ["#FFCA28", "#F57C00", "#039be5", "#757575"];
+FamilyTree.miniMap.selectorBackgroundColor = "#0F0F0F";
+FamilyTree.miniMap.focusStroke = "#039BE5";
+FamilyTree.miniMap.opacity = 0.2;
+FamilyTree.miniMap.border = '1px solid #0D0D0D';
+FamilyTree.miniMap.width = 200;
+FamilyTree.miniMap.height = 100;
+FamilyTree.miniMap.padding = 10;
+FamilyTree.miniMap.position = {
+  top: 'padding',
+  left: 'padding',
+  right: undefined,
+  bottom: undefined
+};
 
 chart.load([
     {id: 1, title: 'Ancestor / Progenitor', name: 'Gadhapani Nemmaluri', gender: 'male', },
