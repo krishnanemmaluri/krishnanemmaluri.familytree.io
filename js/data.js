@@ -4,6 +4,7 @@ var chart = new FamilyTree(document.getElementById("tree"), {
     siblingSeparation: 50,
     template: 'hugo',
     mode: 'dark',
+    miniMap: true,
     nodeBinding: {
         field_0: "name",
         field_1: "title",
