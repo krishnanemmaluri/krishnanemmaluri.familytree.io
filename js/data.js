@@ -1,7 +1,7 @@
 //JavaScript
 var chart = new FamilyTree(document.getElementById("tree"), {
     mouseScrool: FamilyTree.action.zoom,
-    siblingSeparation: 50,
+    siblingSeparation: 30,
     template: 'hugo',
     mode: 'dark',
     nodeBinding: {
@@ -14,10 +14,11 @@ var chart = new FamilyTree(document.getElementById("tree"), {
     }
 });
 
+
 chart.load([
     {id: 1, title: 'Ancestor / Progenitor', name: 'Gadhapani Nemmaluri', gender: 'male', },
     {id: 2, mid: 1, title: 'Late', name: 'Sarabhanna ', gender: 'male', },
-    {id: 3, mid: 1, title: 'Late', name: 'Pattenna ', gender: 'male', },
+    {id: 3, mid: 1, title: 'Late', name: 'Pattenna ', gender: 'male', location: 'Jangareddigudem', },
     {id: 4, mid: 2, title: 'Late', name: 'Gadhapani ', gender: 'male', },
     {id: 5, mid: 4, title: 'Late', name: 'Uppayya ', gender: 'male', },
     {id: 6, mid: 4, title: 'Late', name: 'Subbanna ', gender: 'male', },
@@ -31,7 +32,7 @@ chart.load([
     {id: 14, mid: 11, title: 'Late', name: 'Satyanarayana ', gender: 'male', },
     {id: 15, pids: [16], mid: 14, title: 'Late', name: 'Seetarama Murthy', gender: 'male', },
     {id: 16, pids: [15], title: 'Late', name: 'Unknown', gender: 'female', },
-    {id: 17, pids: [18], mid: 14, title: 'Late', name: 'Satyanarayana Murthy', gender: 'male', },
+    {id: 17, pids: [19,18], mid: 14, title: 'Late', name: 'Satyanarayana Murthy', gender: 'male', },
     {id: 18, pids: [17], title: 'Late', name: 'Satyavathi', gender: 'female', linkedin: 'abc', },
     {id: 19, pids: [17], name: 'Sree Lakshmi', gender: 'female', },
     {id: 20, pids: [21], mid: 15, fid: 16, name: 'Bhagavan', gender: 'male', },
@@ -55,5 +56,29 @@ chart.load([
     {id: 38, pids: [39], name: 'Venkataraman', gender: 'male', },
     {id: 39, pids: [38], mid: 17, fid: 19, name: 'Jayanthi', gender: 'female', },
     {id: 40, pids: [41], mid: 17, fid: 19, name: 'Taraka Rama Sastry', gender: 'male', },
-    {id: 41, pids: [40], name: 'Unknown', gender: 'female', }
+    {id: 41, pids: [40], name: 'Unknown', gender: 'female', },
+    {id: 42, mid: 10, name: 'Dharmaraju', gender: 'male', },
+    {id: 43, mid: 10, name: 'Venkata Ramayya', gender: 'male', },
+    {id: 44, mid: 10, name: 'Satyanarayana ', gender: 'male', },
+    {id: 45, mid: 10, name: 'Appanna', gender: 'male', },
+    {id: 46, mid: 44, name: 'Sree Ramachandra Murthy', gender: 'male', },
+    {id: 47, mid: 44, name: 'Mallikarjuna Rao', gender: 'male', },
+    {id: 48, mid: 44, name: 'Srinivasa Murthy', gender: 'male', },
+    {id: 49, mid: 44, name: 'Radha Krishna', gender: 'male', },
+    {id: 50, mid: 44, name: 'Satyavathi', gender: 'female', },
+    {id: 51, mid: 47, name: 'Satish', gender: 'male', },
+    {id: 52, mid: 47, name: 'Radhika', gender: 'female', },
+    {id: 53, mid: 48, name: 'Sowjanya', gender: 'female', },
+    {id: 54, mid: 48, name: 'Sailaja', gender: 'female', },
+    {id: 55, mid: 49, name: 'Sai', gender: 'male', },
+    {id: 56, mid: 49, name: 'Ramachandra', gender: 'male', },
+    {id: 57, mid: 6, name: 'Pedaramayya', gender: 'male', },
+    {id: 58, mid: 6, name: 'Chinaramayya', gender: 'male', },
+    {id: 59, mid: 57, name: 'Subbanna ', gender: 'male', location: 'Ballipadu', },
+    {id: 60, mid: 58, name: 'Satyanarayana ', gender: 'male', },
+    {id: 61, mid: 7, name: 'Subbanna ', gender: 'male', },
+    {id: 62, mid: 7, name: 'Ramaswamy', gender: 'male', },
+    {id: 63, mid: 7, name: 'Gadhapani ', gender: 'male', },
+    {id: 64, mid: 8, name: 'Buchamma (Chamarty)', gender: 'female', },
+    {id: 65, mid: 9, name: 'Veeranna ', gender: 'male', },
 ]);
